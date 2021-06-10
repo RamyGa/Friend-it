@@ -1,0 +1,30 @@
+﻿
+
+@model IEnumerable<Rent_it.Models.Movie>
+@{
+    ViewData["Title"] = "Random!";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<a> @Html.ActionLink("Add a Movie", "AddMovie", "Movies",null, new { @class = "btn btn-primary" })</a> 
+
+<ul>
+    @foreach (var movies in Model)
+    {
+        <td>@Html.ActionLink(movies.Name, "Details", "Movies", new { id = movies.Id }, null)</td>
+
+    }
+</ul>
+@*  }*@
+
+
+
+
+
+
+
+
